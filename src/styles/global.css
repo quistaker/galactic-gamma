@@ -89,3 +89,17 @@ html {
   }
 
 }
+
+/* links styles */
+.sttmList a:visited {
+  color: #b7245c;
+}
+
+.sttmList a {
+  color: #446df6;
+}
+
+.sttmList a:hover,
+.sttmList a:focus {
+  color: #b7245c;
+}

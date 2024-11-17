@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+import Statement from '../../components/Statement.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro'
+
+export async function getStaticPaths() {
+  const allStatements = await getCollection("statements")
+  const uniqueTags = [...new Set(allStatements.map((statement) => statement.data.tags).flat())]
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allStatements.filter((statement) => statement.data.tags.includes(tag))
+    return {
+        params: { tag },
+        props: { statements: filteredPosts },
+    }
+  })
+}
+
+const { tag } = Astro.params
+const { statements } = Astro.props
+---
+<BaseLayout pageTitle={tag}>
+  <p>Posts tagged with {tag}</p>
+  <ul>
+    {statements.map((statement) => <Statement url={`/statements/${statement.slug}`} person={statement.data.person}/> )}
+  </ul>
+</BaseLayout>
