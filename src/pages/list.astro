@@ -1,0 +1,29 @@
+---
+import "../styles/global.css"
+import Navigation from "../components/Navigation.astro"
+import Footer from "../components/Footer.astro";
+const pageTitle = "list of final statements"
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} >
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <Navigation />
+
+    <h1>{pageTitle}</h1>
+    <ul>
+      <li><a href="/posts/post1">post1</a></li>
+      <li><a href="/posts/Арамян Армен Варданович">Арамян Армен Варданович</a></li>
+      <li><a href="/posts/Гутникова Алла Михайловна">Гутникова Алла Михайловна</a></li>
+      <li><a href="/posts/Даниэль Юлий Маркович">Даниэль Юлий Маркович</a></li>
+      <li><a href="/posts/Джемилев Мустафа Абдулджемиль">Джемилев Мустафа Абдулджемиль</a></li>
+    </ul>
+    <Footer />
+  </body>
+</html>
