@@ -1,0 +1,13 @@
+---
+const { address, username, label } = Astro.props;
+---
+<a href={`https://www.${address}/${username}`}>{label}</a>
+
+<style>
+    a {
+      padding: 0.25rem 0.5rem;
+      color: whitesmoke;
+      background-color: #446df6;
+      text-decoration: none;
+    }
+  </style>

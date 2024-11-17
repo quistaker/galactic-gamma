@@ -1,3 +1,9 @@
+/* whiteSmoke = #f6f6f6 */
+/* roseRed = #b7245c */
+/* black = #000 */
+/* secretOfMana = #446df6 */
+/* leafy = #69995d */
+
 html {
     background-color: #f6f6f6;
     font-family: sans-serif;
@@ -16,11 +22,70 @@ html {
   }
   
   h1 {
-    color: #b7245c;
+    color: black;
     margin: 1rem 0;
     font-size: 2.5rem;
   }
 
-/* roseRed = "#b7245c" */
-/* leafy = "#69995d" */
-/* secretOfMana = "#446df6" */
+/* nav styles */
+.hamburger {
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin-bottom: 10px;
+  background-color: black;
+}
+
+.nav-links {
+  width: 100%;
+  top: 5rem;
+  left: 48px;
+  background-color: #ff9776;
+  display: none;
+  margin: 0;
+}
+
+.nav-links a {
+  display: block;
+  text-align: center;
+  color: black;
+  padding: 10px 0;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: #69995d;
+}
+
+.expanded {
+  display: unset;
+}
+
+@media screen and (min-width: 636px) {
+  .nav-links {
+    margin-left: 5em;
+    display: block;
+    position: static;
+    width: auto;
+    background: none;
+  }
+
+  .nav-links a {
+    display: inline-block;
+    padding: 15px 20px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+}

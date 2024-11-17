@@ -1,10 +1,19 @@
 ---
+import Social from "./Social.astro"
 ---
+<style>
+    footer {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+</style>
+
 <footer>
-    <h2>social media</h2>
     <p>
-        <a href="https://t.me/ne_poslednee_slovo">telegram, </a>
-        <a href="https://www.instagram.com/the.final.statement">instagram_En, </a>
-        <a href="https://www.instagram.com/poslednee_slovo_">instagram_Ru</a>
+        <Social address="t.me" username="ne_poslednee_slovo" label="telegram"/>
+        <Social address="instagram.com" username="the.final.statement" label="instagram_En"/>
+        <Social address="instagram.com" username="poslednee_slovo_" label="instagram_Ru"/>
     </p> 
 </footer>
+
