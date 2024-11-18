@@ -8,6 +8,12 @@ const pageTitle = "list of final statements"
 
 <BaseLayout pageTitle={pageTitle}>
   <ul class="sttmList">
-    {allStatements.map((statement) => <Statement url={ `/statements/${statement.slug}` } person={statement.data.person}></Statement>)}
+    {allStatements.map((statement) => 
+      <Statement 
+        url={`/statements/${statement.slug}`} 
+        person={statement.data.person}
+      >
+      </Statement>
+    )}
   </ul>
 </BaseLayout>

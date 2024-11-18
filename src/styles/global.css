@@ -46,12 +46,18 @@ html {
   }
   
   h1 {
+    max-width: 20ch;
     color: black;
-    margin: 1rem 0;
+    margin: 1rem auto;
     font-size: 2.5rem;
+    text-align: center;
   }
 
-/* nav styles */
+  p {
+    font-size: 1.08rem;
+  }
+
+/* nav styles (mobile-first)*/
 .hamburger {
   padding-right: 20px;
   cursor: pointer;
@@ -94,10 +100,12 @@ html {
   display: unset;
 }
 
+/* for desktop */
+
 @media screen and (min-width: 636px) {
   .nav-links {
-    margin-left: 5em;
-    display: block;
+    display: flex;
+    justify-content:space-between;
     position: static;
     width: auto;
     background: none;
