@@ -1,12 +1,36 @@
-/* whiteSmoke = #f6f6f6 */
-/* roseRed = #b7245c */
-/* black = #000 */
-/* secretOfMana = #446df6 */
-/* leafy = #69995d */
+@font-face {
+  font-family: 'CoFoSans';
+  src: 
+    url("../../public/fonts/CoFoSans-Light.otf") format("opentype");
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: 'CoFoSans';
+  src: 
+    url("../../public/fonts/CoFoSans-LightItalic.otf") format("opentype");
+  font-weight: lighter;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'CoFoSans';
+  src: 
+    url("../../public/fonts/CoFoSans-Medium.otf") format("opentype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'CoFoSans';
+  src: 
+    url("../../public/fonts/CoFoSans-MediumItalic.otf") format("opentype");
+  font-weight: bold;
+  font-style: italic;
+}
 
 html {
     background-color: #f6f6f6;
-    font-family: sans-serif;
+    font-family: 'CoFoSans', sans-serif;
   }
   
   body {
@@ -102,4 +126,24 @@ html {
 .sttmList a:hover,
 .sttmList a:focus {
   color: #b7245c;
+}
+
+/* tags style */
+
+.tag a {
+  color: #00539F;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  margin: 0.2em;
+  border: dotted 1px #a1a1a1;
+  border-radius: .5em;
+  padding: .25em .5em;
+  font-size: 1em;
+  background-color: #F8FCFD;
 }
