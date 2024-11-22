@@ -155,3 +155,38 @@ html {
   font-size: 1em;
   background-color: #F8FCFD;
 }
+
+/* person info */
+
+.personInfo {
+  display: flex;
+  border-bottom: solid grey 2px;
+  margin-bottom: 2rem;
+  padding-bottom: 3rem;
+}
+
+.personInfo img {
+  max-height: 300px;
+}
+
+.textInfo {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2rem;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.bottomLineP {
+  margin-bottom: 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.margin-bottom {
+  margin: 2rem 0;
+}

@@ -1,10 +1,18 @@
 ---
 const { frontmatter } = Astro.props;
 
+import PersonInfo from "../components/PersonInfo.astro";
 import BaseLayout from "./BaseLayout.astro";
 ---
 <BaseLayout pageTitle={frontmatter.person}>
-    <!-- <p>statement date: {frontmatter.statementDate}</p> -->
+    <PersonInfo 
+      aboutPerson={frontmatter.aboutPerson} 
+      aboutCase={frontmatter.aboutCase} 
+      timeToRead={frontmatter.timeToRead}
+      image={frontmatter.image}
+    />
+    <p class="bold margin-bottom">«{frontmatter.quote}».</p> 
+    <p style="text-align: center;">---</p>
     <slot />
     <div class="tags">{frontmatter.tags.map((tag) => (<p class="tag"><a href=`../tags/${tag}`>{tag}</a></p>))}</div>
 </BaseLayout>

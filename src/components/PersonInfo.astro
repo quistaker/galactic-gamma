@@ -1,0 +1,17 @@
+---
+const { aboutPerson, aboutCase, timeToRead, image } = Astro.props
+---
+<div class="personInfo">
+  <img src=`../../public/images/${image}` alt="">
+  <div class="textInfo">
+    <p class="bold">{aboutPerson}</p>
+    <p class="grow">{aboutCase}</p>
+    <p class="bottomLineP">Time to read: {timeToRead} min</p>
+  </div>
+</div>
+
+<style>
+  
+
+
+</style>
