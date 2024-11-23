@@ -5,7 +5,7 @@ import MarkdownPostLayout from '../../layouts/MarkdownPostLayout.astro';
 export async function getStaticPaths() {
   const blogEntries = await getCollection('statements');
   return blogEntries.map(entry => ({
-    params: { slug: entry.slug }, props: { entry },
+    params: { slug: `/galactic-gamma/${entry.slug}` }, props: { entry },
   }));
 }
 
