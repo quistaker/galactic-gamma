@@ -21,6 +21,6 @@ const { statements } = Astro.props
 <BaseLayout pageTitle={tag}>
   <p>Posts tagged with {tag}</p>
   <ul>
-    {statements.map((statement) => <Statement url={`/statements/${statement.slug}`} person={statement.data.person}/> )}
+    {statements.map((statement) => <Statement url={`/galactic-gamma/statements/${statement.slug}`} person={statement.data.person}/> )}
   </ul>
 </BaseLayout>

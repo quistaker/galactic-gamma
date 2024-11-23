@@ -6,6 +6,6 @@ const tags = [...new Set(allStatements.map((statement) => statement.data.tags).f
 const pageTitle = "all tags";
 ---
 <BaseLayout pageTitle={pageTitle}>
-  <div class="tags">{tags.map((tag) => (<p class="tag"><a href=`../tags/${tag}`>{tag}</a></p>))}</div>
+  <div class="tags">{tags.map((tag) => (<p class="tag"><a href=`https://quistaker.github.io/galactic-gamma/tags//${tag}`>{tag}</a></p>))}</div>
 </BaseLayout>
 
