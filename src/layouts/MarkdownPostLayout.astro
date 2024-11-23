@@ -14,5 +14,5 @@ import BaseLayout from "./BaseLayout.astro";
     <p class="bold margin-bottom">«{frontmatter.quote}».</p> 
     <p style="text-align: center;">---</p>
     <slot />
-    <div class="tags">{frontmatter.tags.map((tag) => (<p class="tag"><a href=`../tags/${tag}`>{tag}</a></p>))}</div>
+    <div class="tags">{frontmatter.tags.map((tag) => (<p class="tag"><a href=`https://quistaker.github.io/galactic-gamma/tags/${tag}`>{tag}</a></p>))}</div>
 </BaseLayout>
